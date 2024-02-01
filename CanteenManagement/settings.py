@@ -52,12 +52,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Restaurant_management_system.urls'
+ROOT_URLCONF = 'CanteenManagement.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['Restaurant_management_system/templates'],
+        'DIRS': ['CanteenManagement/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Restaurant_management_system.wsgi.application'
+WSGI_APPLICATION = 'CanteenManagement.wsgi.application'
 
 
 # Database
