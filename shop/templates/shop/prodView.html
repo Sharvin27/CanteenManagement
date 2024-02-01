@@ -5,19 +5,22 @@
     #cont {
         min-height : 553px;
     }
+    .card{
+        border: solid white 4px;
+    }
 {% endblock %}
 {% block body %}
 <div>&nbsp;
-    <a href="/shop" class="active text-dark">
+    <a href="/shop" class="active text-white">
       <i class="fas fa-qrcode"></i>
       <span>All Food</span>
     </a>
 </div>
 
-<div class="container my-4" id="cont">
+<div class="container my-4 " id="cont">
     <div class="row">
     <div class="col-md-4">
-        <img src="/media/{{product.image}}" width="233px" height="300px">
+        <img class="card" src="/media/{{product.image}}" width="233px" height="300px" >
     </div>
 
     <div class="col-md-8">

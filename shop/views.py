@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import HttpResponseRedirect
-
+import math
 from .models import Product, Contact, Orders, OrderUpdate
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -19,7 +19,7 @@ def index(request):
     for cat in cats:
         prod = Product.objects.filter(category=cat)
         n = len(prod)
-        nSlides = n // 4 + ceil((n / 4) - (n // 4))
+        nSlides = nSlides = math.ceil(n / 4)
         allProds.append([prod, range(1, nSlides), nSlides])
     darshan = {'allProds': allProds}
     return render(request, 'shop/index.html', darshan)

@@ -1,6 +1,15 @@
 {% extends 'shop/basic.html' %}
 {% block title%} Search - CRCE CANTEEN {% endblock %}
 {% block css %}
+
+        /* white glassmorphism */
+        .white-glassmorphism {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        }
         #cont {
             min-height : 573px;
         }
@@ -44,7 +53,7 @@
   {% block body %}
   {% load static %}
 <div>&nbsp;
-    <a href="/shop" class="active text-dark"  style="font-size:20px;">
+    <a href="/shop" class="active text-white"  style="font-size:20px;">
       <i class="fas fa-qrcode"></i>
       <span>All Food</span>
     </a>
@@ -63,10 +72,10 @@
                 {% endfor %}
             </ul>
             <div class="container carousel-inner no-padding">
-                <div class="carousel-item active">
+                <div class="carousel-item  active">
                     {% for i in product %}
-                    <div class="col-xs-3 col-sm-3 col-md-3">
-                        <div class="card align-items-center" style="width: 18rem;">
+                    <div class="col-xs-3  col-sm-3 col-md-3">
+                        <div class="card . white-glassmorphism align-items-center" style="width: 18rem;">
                             <img src='/media/{{i.image}}' class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h6 class="card-title" id="namepr{{i.id}}">{{i.product_name|slice:"0:20"}}...</h6>
